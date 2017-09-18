@@ -1,6 +1,41 @@
-frontend-nanodegree-arcade-game
-===============================
+# Frogger Arcade game
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+[![N|Solid](froggerScreen.png)]
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+Frogger game is a game where you have to pass the cars with out hitting it to the 
+other side to win. I did it diffrently where I changed the frog to human and the cars to bugs .
+
+  - Type some Markdown on the left
+  - See HTML in the right
+  - Magic
+
+# How to install
+
+  - Open your browser
+  - Poof here is the game 
+
+
+# Controllers
+you can play using the keyboard (up,down,left,right) to play 
+
+
+
+> publishable as-is, as plain text, without
+> looking like it's been marked up with tags
+> or formatting instructions.
+
+This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
+
+
+
+
+
+License
+----
+
+MIT
+
+
+
+
+ 
