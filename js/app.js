@@ -2,7 +2,7 @@
 
 
 
-  returnRandomValue = function(possibleValues){
+ var returnRandomValue = function(possibleValues){
     var randomPlace = Math.floor(Math.random() * possibleValues.length);
     return possibleValues[randomPlace];
 };
@@ -34,7 +34,7 @@ Enemy.prototype.update = function(dt) {
     }
 
     // Check for collision with enemies or barrier-walls
-    checkCollision(this);
+    this.checkCollision();
 };
 
 // Draw the enemy on the screen, required method for game
@@ -54,7 +54,7 @@ var Player = function(speed) {
 
 Player.prototype.update = function() {
     
-}
+};
 
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -64,16 +64,16 @@ Player.prototype.render = function() {
 
 Player.prototype.handleInput = function(keyPress) {
     if (keyPress == 'left') {
-        player.x -= player.speed;
+        this.x -= this.speed;
     }
     if (keyPress == 'up') {
-        player.y -= player.speed - 20;
+        this.y -= this.speed - 20;
     }
     if (keyPress == 'right') {
-        player.x += player.speed;
+        this.x += this.speed;
     }
     if (keyPress == 'down') {
-        player.y += player.speed - 20;
+        this.y += this.speed - 20;
     }
     
 };
@@ -81,13 +81,13 @@ Player.prototype.handleInput = function(keyPress) {
 
 
 
-var checkCollision = function(anEnemy) {
+
     // check for collision between enemy and player
-    if (
-        player.y + 131 >= anEnemy.y + 90
-        && player.x + 25 <= anEnemy.x + 88
-        && player.y + 73 <= anEnemy.y + 135
-        && player.x + 76 >= anEnemy.x + 11) {
+    Enemy.prototype.checkCollision = function () {
+      if (player.y + 131 >= this.y + 90
+        && player.x + 25 <= this.x + 88
+        && player.y + 73 <= this.y + 135
+        && player.x + 76 >= this.x + 11) {
         
         player.x = 202.5;
         player.y = 383;
