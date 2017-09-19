@@ -52,9 +52,9 @@ var Player = function(speed) {
 };
 
 Player.prototype.update = function() {
-	if (player.y + 63 <= 0) {        
-        player.x = 202.5;
-        player.y = 383;
+	if (this.y + 63 <= 0) {        
+        this.x = 202.5;
+        this.y = 383;
         
 
         ctx.fillStyle = 'white';
@@ -70,14 +70,14 @@ Player.prototype.update = function() {
     }
 
   
-    if (player.y > 383 ) {
-        player.y = 383;
+    if (this.y > 383 ) {
+        this.y = 383;
     }
-    if (player.x > 402.5) {
-        player.x = 402.5;
+    if (this.x > 402.5) {
+        this.x = 402.5;
     }
-    if (player.x < 2.5) {
-        player.x = 2.5;
+    if (this.x < 2.5) {
+        this.x = 2.5;
     }
     
 };
