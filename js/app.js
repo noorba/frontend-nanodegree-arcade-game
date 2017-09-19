@@ -1,7 +1,6 @@
 
 
-
-
+'use strict';
  var returnRandomValue = function(possibleValues){
     var randomPlace = Math.floor(Math.random() * possibleValues.length);
     return possibleValues[randomPlace];
@@ -53,6 +52,33 @@ var Player = function(speed) {
 };
 
 Player.prototype.update = function() {
+	if (player.y + 63 <= 0) {        
+        player.x = 202.5;
+        player.y = 383;
+        
+
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, 505, 171);
+       allEnemies.length = 0;
+	   for (var i = 0; i <= 3; i++) {
+        var enemy = new Enemy();
+        
+        allEnemies.push(enemy);
+    }
+        
+
+    }
+
+  
+    if (player.y > 383 ) {
+        player.y = 383;
+    }
+    if (player.x > 402.5) {
+        player.x = 402.5;
+    }
+    if (player.x < 2.5) {
+        player.x = 2.5;
+    }
     
 };
 
@@ -82,8 +108,8 @@ Player.prototype.handleInput = function(keyPress) {
 
 
 
-    // check for collision between enemy and player
-    Enemy.prototype.checkCollision = function () {
+// check for collision between enemy and player
+Enemy.prototype.checkCollision = function () {
       if (player.y + 131 >= this.y + 90
         && player.x + 25 <= this.x + 88
         && player.y + 73 <= this.y + 135
@@ -94,33 +120,7 @@ Player.prototype.handleInput = function(keyPress) {
     }
 
     
-    if (player.y + 63 <= 0) {        
-        player.x = 202.5;
-        player.y = 383;
-        
-
-        ctx.fillStyle = 'white';
-        ctx.fillRect(0, 0, 505, 171);
-       allEnemies.length = 0;
-	   for (var i = 0; i <= 3; i++) {
-        var enemy = new Enemy();
-        
-        allEnemies.push(enemy);
-    }
-        
-
-    }
-
-  
-    if (player.y > 383 ) {
-        player.y = 383;
-    }
-    if (player.x > 402.5) {
-        player.x = 402.5;
-    }
-    if (player.x < 2.5) {
-        player.x = 2.5;
-    }
+    
 };
 
 
